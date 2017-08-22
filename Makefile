@@ -1,6 +1,7 @@
 
-all:
-	 fltk-config --use-images --compile flimageview.cxx 
-   
+
+all: 
+	   fltk-config --use-images --compile flpicview.cxx 
+
 run:
-	 fltk-config --use-images --compile flimageview.cxx  ; ./flimageview 
+	g++ -L/usr/local/lib -lfltk -lXext -lX11 -lm  "flpicview.cxx"  -o file.out 
